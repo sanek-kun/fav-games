@@ -1,27 +1,19 @@
-export function renderGames(game , gamecont){
+export function renderGames(game , gamecont , favorites , append){
     const gameCard = game.map((game) => {
-        return `
-        <div>
-            <img src='${game.background_image}' width = "250" height = "250">
-            <h2>${game.name}</h2>
-            <p>${game.rating} ★ </p>
-            <button type="button">add to favotite</button>
-        </div>
+         const isFavorite = favorites.some(fav => fav.id === game.id)
+         return `
+         <div>
+             <img src='${game.background_image}' width = "250" height = "250">
+             <h2>${game.name}</h2>
+             <p>${game.rating} ★ </p>
+            <button type="button" data-add-to-favorite="${game.id}"> ${isFavorite ? "remove from favorite" : "add to favorite"}</button>
+         </div>
         `
-    })
-    gamecont.innerHTML = gameCard.join()
-}
-export function renderMoreGames(game , gamecont){
-    const gameCard = game.map((game) => {
-        return `
-        <div>
-            <img src='${game.background_image}' width = "250" height = "250">
-            <h2>${game.name}</h2>
-            <p>${game.rating} ★ </p>
-            <button type="button">add to favotite</button>
-        </div>
-        `
-    })
-
-    gamecont.innerHTML += gameCard.join()
+     })
+     
+     if(append ===true){
+        gamecont.innerHTML += gameCard.join()
+     }else{
+        gamecont.innerHTML = gameCard.join()
+     }
 }
