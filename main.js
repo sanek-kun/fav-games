@@ -94,12 +94,12 @@ async function loadgames () {
                 const getFavoritegames = favorites
                 renderGames(getFavoritegames , allgames , favorites)
                 showFavorites = true
-                favoriteGamesButton.textContent = "all games"
             }else{
                 renderGames(games , allgames , favorites)
                 showFavorites = false
-                favoriteGamesButton.textContent = "favorite games"
             }
+
+            favoriteGamesButton.querySelector("span").textContent = showFavorites ? "all games" : "favorite games";
             
         })
     }

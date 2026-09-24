@@ -7,23 +7,27 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>GAME STORE</h1>
 
-    <div class="searchGames">
-        <input class="searchGameInput" type="text" placeholder="search game...">
-        <button class = "searchButton"type="button">search</button>
-    </div>
-    <div class="favoriteGames">
-        <button class="favoriteGamesButton" type="button">favorite games</button>
-        <div class="favoriteGamesCont"></div>
-    </div>
+    <header>
+        <img src="ChatGPT Image 24 wrz 2026, 23_19_15.png" alt="" width="200px" height="65px">
+
+        <div class="searchGames">
+            <img class="searchGamesImg" src="magnifying-glass.png" alt="">
+            <input class="searchGameInput" type="text" placeholder="search game...">
+            <button class = "searchButton"type="button"><span>search</span></button>
+        </div>
+        <div class="favoriteGames">
+            <button class="favoriteGamesButton" type="button"><img src="heart.png" alt=""><span>favorite games</span></button>
+        </div>
+    </header>
     
 
+    <main>
+        <div class="allgames"></div>
 
-    <div class="allgames"></div>
-
-    <button type="button" class="loadMoreButton" >load more games</button>
-
+        <button type="button" class="loadMoreButton" >load more games</button>
+    
+    </main>
     <script type="module" src="main.js"></script>
 </body>
 </html>

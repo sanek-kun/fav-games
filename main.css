@@ -1,0 +1,112 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f0f14;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1b1b1f;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 30px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.searchGames {
+    border: 1px solid #33333d;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background: #1a1a24;
+    overflow: hidden;
+}
+
+input.searchGameInput {
+    border: none;
+    outline: none;
+    background: #1a1a24;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+
+button.searchButton {
+    border: none;
+    background-color: #04c996;
+    color: #000000;
+    padding: 11px 20px 11px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: lighter;
+
+}
+.searchButton {
+    background-color: #04c996;
+    color: #000;
+    transition: background-color 0.2s ease;
+}
+
+.searchButton:hover {
+    background-color: #03b587;
+}
+.searchGamesImg {
+    width: 40px; 
+    height: 40px;
+    filter: invert(1);
+    padding: 0px 0px 0px 15px;
+}
+
+button.favoriteGamesButton {
+    border: 1px solid #3a3a45;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #1a1a24;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.favoriteGamesButton:hover {
+    border-color: #3a3a45;
+    box-shadow: 3px 2px 0 #04c996;
+    transform: translate(-3px, -3px);
+    transition: 0.2s;
+}
+
+button.favoriteGamesButton:active {
+    box-shadow: 0 0 0 #000000;
+    transition: 0.2s;
+}
+.favoriteGamesImg {
+    width: 10px; 
+    height: 10px;
+    filter: invert(1);
+    padding: 0px 0px 0px 0px;
+}
+
+.favoriteGamesButton img{
+    width: 10px; 
+    height: 10px;
+    filter: invert(1);
+}
+
+.favoriteGamesButton img{
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+    padding: 0px 10px 0px 0px;
+}
