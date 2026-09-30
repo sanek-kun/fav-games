@@ -2,11 +2,11 @@ export function renderGames(game , gamecont , favorites , append){
     const gameCard = game.map((game) => {
          const isFavorite = favorites.some(fav => fav.id === game.id)
          return `
-         <div>
-            <img src='${game.background_image}' width = "250" height = "250">
-            <h2>${game.name}</h2>
-            <p>${game.rating} ★ </p>
-            <button type="button" data-add-to-favorite="${game.id}">${isFavorite ? "remove from favorite" : "add to favorite"}</button>
+         <div class="gameCont">
+            <img class="gameImg" src='${game.background_image}'>
+            <h2 class="gameTitle">${game.name}</h2>
+            <p class="gameRating">${game.rating} ★ </p>
+            <button class="favByn" type="button" data-add-to-favorite=" ${game.id}"><span class = "favImg">♡</span>${isFavorite ? "remove from favorite" : "add to favorite"}</button>
          </div>
         `
      })

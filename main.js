@@ -2,6 +2,7 @@ const allgames = document.querySelector(".allgames")
 const searchButton = document.querySelector(".searchButton")
 const searchGameInput = document.querySelector(".searchGameInput")
 const loadMoreButton = document.querySelector(".loadMoreButton")
+const loadMoreButtonCont = document.querySelector(".loadMoreButtonCont")
 const favoriteGamesButton = document.querySelector(".favoriteGamesButton")
 import {getGames} from "./api.js"
 import { renderGames} from "./render.js"
@@ -94,9 +95,12 @@ async function loadgames () {
                 const getFavoritegames = favorites
                 renderGames(getFavoritegames , allgames , favorites)
                 showFavorites = true
+                loadMoreButton.classList.remove("show")
+                loadMoreButtonCont.classList.add("hide")
             }else{
                 renderGames(games , allgames , favorites)
                 showFavorites = false
+                loadMoreButtonCont.classList.remove("hide")
             }
 
             favoriteGamesButton.querySelector("span").textContent = showFavorites ? "all games" : "favorite games";
@@ -107,6 +111,18 @@ async function loadgames () {
         console.log(error.message)
     }
 }
+
+window.addEventListener("scroll" , () =>{
+    const scrollPosition = window.innerHeight + window.scrollY;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= pageHeight && showFavorites === false) {
+        loadMoreButton.classList.add("show");
+    }else{
+        loadMoreButton.classList.remove("show");
+    }
+
+})
 
 
 loadgames()

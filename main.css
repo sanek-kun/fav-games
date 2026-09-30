@@ -49,12 +49,8 @@ button.searchButton {
     border-radius: 10px;
     cursor: pointer;
     font-weight: lighter;
-
-}
-.searchButton {
-    background-color: #04c996;
-    color: #000;
     transition: background-color 0.2s ease;
+
 }
 
 .searchButton:hover {
@@ -90,18 +86,7 @@ button.favoriteGamesButton:hover {
 button.favoriteGamesButton:active {
     box-shadow: 0 0 0 #000000;
     transition: 0.2s;
-}
-.favoriteGamesImg {
-    width: 10px; 
-    height: 10px;
-    filter: invert(1);
-    padding: 0px 0px 0px 0px;
-}
-
-.favoriteGamesButton img{
-    width: 10px; 
-    height: 10px;
-    filter: invert(1);
+    transform: translate(0, 0);
 }
 
 .favoriteGamesButton img{
@@ -109,4 +94,125 @@ button.favoriteGamesButton:active {
     height: 20px;
     filter: invert(1);
     padding: 0px 10px 0px 0px;
+}
+
+.allgames {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gameImg {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.gameTitle {
+    font-size: 15px;
+    margin: 10px 0px 5px 0px;
+    line-height: 1.3;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 42px;
+    text-align: center;
+}
+
+.gameCont {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    min-height: 390px;
+    background-color: #15151b;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.gameRating {
+    font-size:14px;
+    margin: 5px 0px;
+    text-align: center;
+}
+.favByn{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: #03b587 1px solid;
+    border-radius: 0px 0px 8px 8px;
+    background-color: #0f0f14;
+    color: #03b587;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button.favByn:hover{
+    transition: 0.2s;
+    background-color: #03b587;
+    border: #0f0f14 1px solid ;
+    color: white;
+    padding: 5px;
+    transform: scale(1.05);
+}
+
+.favImg{
+    font-size: 15px;
+    padding-right: 15px;
+}
+
+.loadMoreButtonCont {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loadMoreButtonCont.hide {
+    height: 20px;
+}
+
+.loadMoreButton {
+    padding: 12px 30px;
+    border: 1px solid #03b587;
+    border-radius: 8px;
+    background-color: #15151b;
+    color: #03b587;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.loadMoreButton.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.loadMoreButton:hover {
+    background-color: #03b587;
+    color: white;
+    box-shadow: 0 0 15px rgba(3, 181, 135, 0.25);
+    transform: translateY(0) scale(1.05);
+}
+
+.loadMoreButton:active {
+    transform: translateY(2px) scale(0.98);
+}
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.loadMoreButton:hover .arrow {
+    transform: rotate(180deg);
 }
